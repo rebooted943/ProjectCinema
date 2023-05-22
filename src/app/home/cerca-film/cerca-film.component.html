@@ -1,0 +1,70 @@
+<ion-grid class="ricerca-grid">
+    <ion-row class="ricerca center-content">
+        <ion-col size-lg="12" size-xs="12" class="titolo-col">
+            <h1 class="titolo">Progetto Cinema</h1>
+          </ion-col>
+      <ion-col size-lg="12" size-xs="12" class="ricerca-col ion-justify-content-center">
+        <ion-radio-group [(ngModel)]="tipo" (ionChange)="onTipoChange()">
+          <ion-row class="radio-row center-content">
+            <ion-col size-lg="2" size-xs="12" class="ion-justify-content-end ">
+              <ion-item>
+                <ion-label>Film</ion-label>
+                <ion-radio slot="start" value="movie"></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col size-lg="2" size-xs="12" class="ion-justify-content-end ">
+              <ion-item>
+                <ion-label>Serie TV</ion-label>
+                <ion-radio slot="start" value="series"></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item class="search-item">
+                <ion-input type="text" [(ngModel)]="titoloInserito"></ion-input>
+                <ion-button slot="end" fill="outline"  (click)="cercaFilm(titoloInserito)">Cerca</ion-button>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-radio-group>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+  <div class="pulsantiOrdine">
+    <ion-button slot="end" (click)="ordinaFilmAnno()">Anno</ion-button>
+    <ion-button slot="end" (click)="ordinaNome()">Nome</ion-button>
+    <ion-button slot="end" (click)="ordinaRating()">Rating</ion-button>
+  </div>
+  <ion-grid class="film-grid">
+    <ion-row class="film-list-row">
+      <ion-col size="12" class="film-list-col">
+        <ion-list class="film-list">
+          <ion-item *ngFor="let film of listaFilm" class="film-item">
+            <ion-label>
+              <a [routerLink]="['/singoloFilm', film.id]">
+                <div class="filmElenco">
+                  <div class="immagineElenco">
+                    <ion-img [src]="film.poster"></ion-img>
+                  </div>
+                  <div class="filmInfo">
+                    <div class="titoloElenco">{{film.titolo}}</div>
+                    <div class="annoElenco">{{film.anno}}</div>
+                  </div>
+                  <div class="ratingElenco">{{film.rating}}</div>
+                </div>
+              </a>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  
+  
+
+
+
+
+
+<router-outlet></router-outlet>

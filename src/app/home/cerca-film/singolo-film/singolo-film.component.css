@@ -1,0 +1,142 @@
+* {
+  --ion-background-color: #E5E5E5;
+}
+
+ion-button {
+  --background: #14213D;
+  --background-hover: #9ce0be;
+  --background-activated: #88f4be;
+  --background-focused: #88f4be;
+
+  --color: #FCA311;
+
+  --border-radius: 8px;
+  --border-color: #E5E5E5;
+  --border-style: solid;
+  --border-width: 1px;
+
+  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+  --ripple-color: deeppink;
+
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+
+
+.schermataCardSingola{
+  width: auto;
+  height: 90vh;
+  margin-top: 0;
+  padding-top: 5vh;
+}
+
+.cartaMobile{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto 5vh auto;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contenutoCardDesktop{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+}
+
+.registaFilm{
+  display: flex;
+  justify-content: center;
+}
+
+.attoriFilm{
+  display: flex;
+  justify-content: center;
+}
+
+.durataFilm{
+  display: flex;
+  justify-content: center;
+}
+
+
+.titoloFilm {
+  padding-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.annoFilm {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #888888;
+  margin-bottom: 5vh;
+}
+
+.tramaFilm {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: #1b0303;
+}
+
+.ratingFilm {
+  display: flex;
+  justify-content: center;
+  padding: 2vh 0 10vh 0;  
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+
+.cartaDesktop{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+    max-height: 80vh;
+    height: auto;
+    
+    
+}
+
+.locandinaDesktop{
+    width: 30%;
+}
+
+    /* -------------------------------------------------------------------------- */
+    /*                                MediaQueries                                */
+    /* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 600px){
+  
+  .cartaMobile{
+      display: block;
+  }
+  .cartaDesktop{
+      display: none;
+  }
+  
+}
+@media screen and (min-width: 601px) {
+  .cartaMobile{
+      display: none;
+  }
+  .cartaDesktop{
+      display: flex;
+  }
+  
+}
+  

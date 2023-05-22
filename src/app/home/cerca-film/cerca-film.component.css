@@ -1,0 +1,159 @@
+.filmElenco{
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+} 
+.immagineElenco{
+  max-width: 10vh;
+
+}
+
+.filmElenco .filmInfo {
+  flex-grow: 1;
+  margin-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
+.pulsantiOrdine{
+  padding: 3vh;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ricerca{
+  margin: 3vh ;
+}
+
+.ricerca-grid {
+  --ion-background-color: #E5E5E5;
+}
+
+.ricerca {
+  align-items: center;
+  background-color: #14213D;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.ricerca-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-row {
+  margin-bottom: 10px;
+}
+
+.radio-col {
+  display: flex;
+  align-items: center;
+}
+
+.search-item {
+  margin-top: 10px;
+}
+
+.titolo-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titolo {
+  font-family: 'Roboto', Courier, monospace;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  background-color: #FCA311;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.item-native:hover{
+  background-color: #FCA311;
+}
+
+.film-grid {
+  margin: 3vh;
+}
+
+.film-list-row {
+  justify-content: center;
+}
+
+.film-list-col {
+  max-width: 500px;
+}
+
+.film-item {
+  --highlight-color-focused: #ffcc00;
+  --highlight-color-focused-activated: #ffcc00;
+  /* background-color: #E5E5E5; */
+  background-color: #14213D;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #ffcc00;
+}
+
+@media screen and (max-width: 600px) {
+  
+  
+  .pulsantiOrdine{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.film-grid {
+  --ion-grid-padding: 0;
+}
+
+.film-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  overflow-wrap: break-word;
+}
+
+.immagineElenco {
+  flex: 0 0 100px; 
+  margin-right: 10px;
+}
+
+.filmInfo {
+  flex: 1; /* Occupa lo spazio rimanente */
+  overflow-wrap: break-word;
+}
+
+.titoloElenco {
+  font-size: 1.3rem;
+  font-weight: bold;
+  overflow-wrap: break-word;
+}
+
+.annoElenco {
+  margin-bottom: 5px;
+}
+
+.ratingElenco {
+  color: #ff6600; 
+  font-weight: bold;
+  text-align: right;
+}

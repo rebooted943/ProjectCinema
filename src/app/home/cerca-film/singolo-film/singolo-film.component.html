@@ -1,0 +1,45 @@
+<div class="schermataCardSingola">
+  <ion-card class="cartaMobile">
+      <div class="">
+          <ion-img alt="{{film.Title}}" src="{{film.Poster.slice(0, -4) + '0.jpg'}}"></ion-img>
+      </div>
+      <ion-card-title class="titoloFilm">{{film.Title}}</ion-card-title>
+  
+      <ion-card-header>
+          <ion-card-subtitle class="annoFilm">Anno: {{film.Year}}</ion-card-subtitle>
+        </ion-card-header>
+  
+        <ion-card-content>
+          <p class="tramaFilm">{{film.Plot}}</p>
+          <p class="ratingFilm">Rating: {{film.imdbRating}}</p>
+          <p class="registaFilm">Regista: {{film.Director}}</p>
+          <p class="attoriFilm">Attori: {{film.Actors}}</p>
+          <p class="durataFilm">Durata: {{film.Runtime}}</p>
+        </ion-card-content>
+    </ion-card>
+  
+  
+  
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                               card elenco                               -->
+    <!-- ----------------------------------------------------------------------- -->
+      <ion-card class="cartaDesktop cartaFilm ">
+        <div class="locandinaDesktop">
+          <ion-img alt="{{film.Title}}" src="{{film.Poster.slice(0, -4) + '0.jpg'}}"></ion-img>
+        </div>
+        <ion-card-content class="contenutoCardDesktop" >
+            <ion-card-title class="titoloFilm">{{film.Title}}</ion-card-title>
+            <ion-card-subtitle class="annoFilm">Anno: {{film.Year}}</ion-card-subtitle>
+  
+  
+            <p class="tramaFilm">{{film.Plot}}</p>
+            <p class="registaFilm">Regista: {{film.Director}}</p>
+            <p class="attoriFilm">Attori: {{film.Actors}}</p>
+            <p class="durataFilm">Durata: {{film.Runtime}}</p>
+            <p class="ratingFilm">Rating: {{film.imdbRating}}</p>
+            <ion-button [routerLink]="['']">Torna alla home</ion-button>
+          </ion-card-content>
+  
+      </ion-card>
+</div>
+
